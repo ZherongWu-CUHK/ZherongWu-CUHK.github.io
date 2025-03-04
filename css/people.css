@@ -348,6 +348,7 @@
     .people .left {
         margin-right: 0;
         margin-bottom: 2rem;
+        border: none;
     }
     
     .people .image {
