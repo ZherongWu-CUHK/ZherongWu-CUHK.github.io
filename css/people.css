@@ -195,13 +195,16 @@
     padding-left: 1.5rem;
 }
 .education-position ul p::before {
-    content: "□";
+    content: "";
     position: absolute;
-    top: -9px;
+    top: 4px;
     left: 0;
-    color: inherit;
-    font-size: 1.5rem;
-
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/square.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .education-position li {
