@@ -316,7 +316,6 @@ body {
 
 .awards .item {
     display: flex;
-    gap: 2rem;
     border-bottom: 2px dashed #ccc;
 }
 
