@@ -480,6 +480,7 @@ body {
 
 .awards .item {
     display: flex;
+    border-bottom: 2px dashed #ccc;
 }
 
 .awards .year {
