@@ -149,6 +149,14 @@ body {
     color: inherit;
 }
 
+.people .profile-link a {
+    color: #000;
+    font-size: 1.35rem;
+}
+.people .profile-link a:hover{
+    text-decoration: underline;
+}
+
 .education-position {
     padding: 60px 0;
 }
