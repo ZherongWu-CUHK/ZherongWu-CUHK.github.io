@@ -32,7 +32,7 @@
                         <a href="javascript:void(0)" class="nav-item">People</a>
                         <ul class="sub-nav">
                             <li><a href="people.html">Principal Investigator</a></li>
-                            <li><a href="members.html">Lab Members</a></li> 
+                            <li><a href="members.html">Lab Members</a></li>
                         </ul>
                     </li>
                     <li><a href="research.html" class="nav-item">Research</a></li>
@@ -79,6 +79,10 @@
                         <a href="http://linkedin.com/in/zherong-wu-646226275">
                             <img src="images/In.png" alt="LinkedIn">
                         </a>
+                    </div>
+                    <div class="profile-link">
+                        <a href="https://www.grm.cuhk.edu.hk/en/profile/prof-wu-zherong/" target="_blank">CUHK Department
+                            Page:[Link]</a>
                     </div>
                 </div>
             </div>
@@ -286,29 +290,29 @@
     </footer>
     <script src="js/script.js"></script>
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate'); 
-                observer.unobserve(entry.target); 
-            }
+        document.addEventListener("DOMContentLoaded", function () {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.3
+            });
+
+
+            observer.observe(document.querySelector(".left"));
+            observer.observe(document.querySelector(".right"));
+
+            document.querySelectorAll(".education-position, .awards").forEach(item => {
+                observer.observe(item);
+            });
         });
-    }, {
-        threshold: 0.3 
-    });
 
 
-    observer.observe(document.querySelector(".left"));
-    observer.observe(document.querySelector(".right"));
-
-    document.querySelectorAll(".education-position, .awards").forEach(item => {
-        observer.observe(item);
-    });
-});
-
-    
-        </script>
+    </script>
 </body>
 
 </html>
