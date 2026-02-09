@@ -36,7 +36,7 @@
 
 .news .item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .news .item > .text {
