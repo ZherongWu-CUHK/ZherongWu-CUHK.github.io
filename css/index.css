@@ -10,7 +10,7 @@ body {
 /* 调大右侧 "News, People, Research..." 导航菜单的字体 */
 .navbar .nav-item {
     font-size: 1.5rem !important;;   /* 增大右侧菜单，可根据需要改为 1.25rem 或 20px */
-    font-weight: 500 !important;     /* 让菜单文字更清晰 */
+    font-weight: 600 !important;     /* 让菜单文字更清晰 */
 }
 
 /* 同步规范鼠标悬停弹出的下拉子菜单字体（如 Lab Members） */
