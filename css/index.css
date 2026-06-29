@@ -2,12 +2,21 @@ body {
     padding-top: 0 ;
 }
 
-.navbar {
-    background-color: rgba(117, 125, 33, 0.6);
-    z-index: 10;
-} 
+.navbar .logo h1 {
+    font-size: 1.5rem;    /* 增大左侧标题，可根据需要改为 24px 或更高 */
+    font-weight: 600;     /* 适当加粗 */
+}
 
+/* 调大右侧 "News, People, Research..." 导航菜单的字体 */
+.navbar .nav-item {
+    font-size: 1.15rem;   /* 增大右侧菜单，可根据需要改为 1.25rem 或 20px */
+    font-weight: 500;     /* 让菜单文字更清晰 */
+}
 
+/* 同步规范鼠标悬停弹出的下拉子菜单字体（如 Lab Members） */
+.navbar .sub-nav a {
+    font-size: 1rem;      
+}
 .banner {
     display: flex;
     align-items: flex-start;
