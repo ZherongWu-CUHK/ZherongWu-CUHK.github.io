@@ -119,9 +119,11 @@ body {
 }
 
 .about .intro {
-    margin: 0 auto 6rem;
+    max-width: 1400px;        /* 1. 显式设置一个非常宽的最大限制（原先可能被上层限制了） */
+    width: 92%;               /* 2. 让它占据屏幕 92% 的宽度，两边只留 4% 的极小边距 */
+    margin: 0 auto 6rem;      /* 3. 保持左右居中，底部留白 6rem */
+    padding: 0 20px;          /* 4. 防止在某些极端屏幕上文字贴死浏览器边缘 */
 }
-
 .about .intro h2 {
     margin-bottom: 2rem;
     font-size: 3.75rem;
