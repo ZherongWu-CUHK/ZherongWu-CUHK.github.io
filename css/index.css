@@ -1,29 +1,22 @@
-/* ==========================================================================
-   1. 全局基础样式与导航栏 (Navbar)
-   ========================================================================== */
 body {
     padding-top: 0 ;
 }
 
 .navbar .logo h1 {
-    font-size: 1.8rem;    /* 增大左侧标题 */
+    font-size: 1.8rem;    /* 增大左侧标题，可根据需要改为 24px 或更高 */
     font-weight: 600;     /* 适当加粗 */
 }
 
 /* 调大右侧 "News, People, Research..." 导航菜单的字体 */
 .navbar .nav-item {
-    font-size: 1.5rem !important;;   /* 增大右侧菜单 */
+    font-size: 1.5rem !important;;   /* 增大右侧菜单，可根据需要改为 1.25rem 或 20px */
     font-weight: 700 !important;     /* 让菜单文字更清晰 */
 }
 
-/* 同步规范鼠标悬停弹出的下拉子菜单字体 */
+/* 同步规范鼠标悬停弹出的下拉子菜单字体（如 Lab Members） */
 .navbar .sub-nav a {
     font-size: 1.5rem !important;      
 }
-
-/* ==========================================================================
-   2. 横幅区域 (Banner)
-   ========================================================================== */
 .banner {
     display: flex;
     align-items: flex-start;
@@ -105,15 +98,56 @@ body {
     border-color: #69c0ff;
 }
 
-@keyframes floating {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(15px); }
-    100% { transform: translateY(0); }
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 3.75rem;
+    }
+
+    .banner h2 {
+        font-size: 1.5rem;
+    }
+
+    .banner h3 {
+        font-size: 1.25rem;
+    }
+
+    .banner .btn {
+        font-size: 1.5rem;
+    }
+
+    .banner .btn .icon {
+        width: 40px;
+        height: 40px;
+        padding: 6px;
+    }
 }
 
-/* ==========================================================================
-   3. 关于我们区域 (About Us) - 严格保留您原有的一左一右 Grid 布局
-   ========================================================================== */
+@media (max-width: 480px) {
+    .banner h1 {
+        font-size: 3rem;
+    }
+
+    .banner h2 {
+        font-size: 1.25rem;
+    }
+
+    .banner h3 {
+        font-size: 1rem;
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .about {
     padding: 6rem 0;
 }
@@ -126,6 +160,7 @@ body {
     margin-bottom: 2rem;
     font-size: 3.75rem;
     line-height: 1;
+    color: rgba(117, 125, 33, 0.8);
     color: inherit;
 }
 
@@ -133,6 +168,7 @@ body {
     font-size: 1.5rem;
     line-height: 2rem;
     text-align: justify;
+    color: rgba(117, 125, 33, 0.8);
     color: inherit;
 }
 
@@ -140,7 +176,6 @@ body {
     color: rgba(117, 125, 33, 0.6);
 }
 
-/* 保留您的 5 列网格系统 */
 .about .grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -151,7 +186,6 @@ body {
     display: contents;
 }
 
-/* 图片容器 */
 .about .grid .image {
     grid-column: span 1;
     justify-self: end;
@@ -160,11 +194,6 @@ body {
     border-radius: 50%;
     overflow: hidden;
     margin: 2rem 1.25rem;
-    
-    /* ✨ 新增：强制将容器声明为弹性盒，防止子图片溢出或产生间隙 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .about .grid .content {
@@ -173,7 +202,6 @@ body {
     margin: 2rem 1.25rem;
 }
 
-/* 保留一左一右的交替定位逻辑 */
 .about .grid .item.reverse .image {
     grid-column: 5/6;
 }
@@ -183,18 +211,10 @@ body {
     text-align: right;
 }
 
-/* ✨ 核心修正：彻底解决圆形切角露白、无法填满的问题 */
 .about .grid .image img {
     width: 100%;
     height: 100%;
-    
-    /* ✨ 这一步极其关键： */
-    /* 之前的 fill 会拉伸，改变成 cover 会让图片像壁纸一样等比例平铺，裁剪掉多余的白边并填满圆圈 */
-    object-fit: cover; 
-    
-    /* ✨ 新增放大系数（视情况）：如果您的原图本身自带一圈白边， */
-    /* 取消下面这行的注释（删掉开头的斜杠）可以让图片整体放大 1.1 倍，从而把自带的白边挤出圆圈外 */
-    /* transform: scale(1.1); */
+    object-fit: fill;
 }
 
 .about .grid h3 {
@@ -203,6 +223,7 @@ body {
     line-height: 2rem;
     font-weight: 700;
     text-align: left;
+    color: rgba(117, 125, 33, 0.8);
     color: inherit;
 }
 
@@ -214,9 +235,6 @@ body {
     text-align: justify;
 }
 
-/* ==========================================================================
-   4. 响应式媒体查询
-   ========================================================================== */
 @media (max-width: 1024px) {
     .about .grid .image {
         width: 160px;
@@ -235,14 +253,36 @@ body {
 }
 
 @media (max-width: 768px) {
-    .banner h1 { font-size: 3rem; }
-    .banner h2 { font-size: 1.5rem; }
-    .banner h3 { font-size: 1.25rem; }
-    .banner .btn { font-size: 1.5rem; }
-    .banner .btn .icon { width: 40px; height: 40px; padding: 6px; }
+    .banner h1 {
+        font-size: 3rem;
+    }
 
-    .about { padding: 4rem 0; }
-    .about .intro { margin-bottom: 4rem; padding: 0 1rem; }
+    .banner h2 {
+        font-size: 1.5rem;
+    }
+
+    .banner h3 {
+        font-size: 1.25rem;
+    }
+
+    .banner .btn {
+        font-size: 1.5rem;
+    }
+
+    .banner .btn .icon {
+        width: 40px;
+        height: 40px;
+        padding: 6px;
+    }
+
+    .about {
+        padding: 4rem 0;
+    }
+
+    .about .intro {
+        margin-bottom: 4rem;
+        padding: 0 1rem;
+    }
 
     .about .grid {
         display: grid;
@@ -285,17 +325,37 @@ body {
 }
 
 @media (max-width: 640px) {
-    .about .intro h2 { font-size: 1.25rem; line-height: 1.75rem; }
-    .about .intro p { font-size: 1.25rem; line-height: 1.75rem; }
+    .about .intro h2 {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+
+    .about .intro p {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
 }
 
 @media (max-width: 480px) {
-    .banner h1 { font-size: 2.5rem; }
-    .banner h2 { font-size: 1.25rem; }
-    .banner h3 { font-size: 1rem; }
+    .banner h1 {
+        font-size: 2.5rem;
+    }
 
-    .about .intro h2 { font-size: 2rem; }
-    .about .intro p { font-size: 1rem; }
+    .banner h2 {
+        font-size: 1.25rem;
+    }
+
+    .banner h3 {
+        font-size: 1rem;
+    }
+
+    .about .intro h2 {
+        font-size: 2rem;
+    }
+
+    .about .intro p {
+        font-size: 1rem;
+    }
 
     .about .grid .image {
         width: 90px;
