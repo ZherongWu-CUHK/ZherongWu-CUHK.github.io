@@ -1,15 +1,21 @@
+
+/* ==========================================================================
+   1. 全局基础样式与导航栏 (Navbar)
+   ========================================================================== */
 body {
-    padding-top: 0 ;
+    padding-top: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 .navbar .logo h1 {
-    font-size: 1.8rem;    /* 增大左侧标题，可根据需要改为 24px 或更高 */
+    font-size: 1.8rem;    /* 增大左侧标题 */
     font-weight: 600;     /* 适当加粗 */
 }
 
 /* 调大右侧 "News, People, Research..." 导航菜单的字体 */
 .navbar .nav-item {
-    font-size: 1.5rem !important;;   /* 增大右侧菜单，可根据需要改为 1.25rem 或 20px */
+    font-size: 1.5rem !important;   /* 增大右侧菜单 */
     font-weight: 700 !important;     /* 让菜单文字更清晰 */
 }
 
@@ -17,6 +23,10 @@ body {
 .navbar .sub-nav a {
     font-size: 1.5rem !important;      
 }
+
+/* ==========================================================================
+   2. 横幅区域 (Banner)
+   ========================================================================== */
 .banner {
     display: flex;
     align-items: flex-start;
@@ -72,6 +82,7 @@ body {
     font-size: 2rem;
     color: #fff;
     transition: all 0.3s ease;
+    text-decoration: none;
     animation: floating 2s ease-in-out infinite;
 }
 
@@ -98,69 +109,29 @@ body {
     border-color: #69c0ff;
 }
 
-@media (max-width: 768px) {
-    .banner h1 {
-        font-size: 3.75rem;
-    }
-
-    .banner h2 {
-        font-size: 1.5rem;
-    }
-
-    .banner h3 {
-        font-size: 1.25rem;
-    }
-
-    .banner .btn {
-        font-size: 1.5rem;
-    }
-
-    .banner .btn .icon {
-        width: 40px;
-        height: 40px;
-        padding: 6px;
-    }
-}
-
-@media (max-width: 480px) {
-    .banner h1 {
-        font-size: 3rem;
-    }
-
-    .banner h2 {
-        font-size: 1.25rem;
-    }
-
-    .banner h3 {
-        font-size: 1rem;
-    }
-}
-
 @keyframes floating {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(15px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+    0% { transform: translateY(0); }
+    50% { transform: translateY(15px); }
+    100% { transform: translateY(0); }
 }
 
+/* ==========================================================================
+   3. 关于我们区域 (About Us) - 已修复错位与图片变形
+   ========================================================================== */
 .about {
     padding: 6rem 0;
 }
 
 .about .intro {
+    max-width: 1000px;
     margin: 0 auto 6rem;
+    padding: 0 1.25rem;
 }
 
 .about .intro h2 {
     margin-bottom: 2rem;
     font-size: 3.75rem;
     line-height: 1;
-    color: rgba(117, 125, 33, 0.8);
     color: inherit;
 }
 
@@ -168,7 +139,6 @@ body {
     font-size: 1.5rem;
     line-height: 2rem;
     text-align: justify;
-    color: rgba(117, 125, 33, 0.8);
     color: inherit;
 }
 
@@ -176,54 +146,65 @@ body {
     color: rgba(117, 125, 33, 0.6);
 }
 
+/* 核心修复：将 grid 转换为更稳定的 flex 列表容器 */
 .about .grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    margin: -2rem -1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;              /* 每一行之间的上下间距 */
+    max-width: 1000px;      /* 限制内容最大宽度，避免大屏下两侧太分散 */
+    margin: 0 auto;
+    padding: 0 1.25rem;
 }
 
+/* 每一行独立布局 */
 .about .grid .item {
-    display: contents;
+    display: flex;
+    align-items: center;    /* 垂直居中 */
+    justify-content: space-between;
+    gap: 4rem;              /* 图片与文字之间的左右间距 */
 }
 
+/* 反转类：让图片在右，文字在左 */
+.about .grid .item.reverse {
+    flex-direction: row-reverse;
+}
+
+/* 圆形图片外壳 */
 .about .grid .image {
-    grid-column: span 1;
-    justify-self: end;
+    flex-shrink: 0;         /* 防止图片在挤压时变形 */
     width: 200px;
     height: 200px;
     border-radius: 50%;
     overflow: hidden;
-    margin: 2rem 1.25rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 增加轻微阴影更具现代感 */
 }
 
-.about .grid .content {
-    grid-column: span 2;
-    align-self: center;
-    margin: 2rem 1.25rem;
-}
-
-.about .grid .item.reverse .image {
-    grid-column: 5/6;
-}
-
-.about .grid .item.reverse .content {
-    grid-column: 3/5;
-    text-align: right;
-}
-
+/* 核心修复：解决图片被强行拉伸扁平的问题 */
 .about .grid .image img {
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover;     /* 改为 cover，图片等比例裁剪填满圆圈，不再变形 */
+}
+
+/* 文字内容外壳 */
+.about .grid .content {
+    flex: 1;                /* 自动填满剩余空间 */
+}
+
+/* 默认行文字左对齐，反转行文字右对齐 */
+.about .grid .item .content {
+    text-align: left;
+}
+
+.about .grid .item.reverse .content {
+    text-align: right;
 }
 
 .about .grid h3 {
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.75rem;     /* 稍微拉开标题字号 */
     line-height: 2rem;
     font-weight: 700;
-    text-align: left;
-    color: rgba(117, 125, 33, 0.8);
     color: inherit;
 }
 
@@ -231,135 +212,153 @@ body {
     font-size: 1.125rem;
     font-weight: 400;
     line-height: 1.75rem;
-    color: #000;
+    color: #333;            /* 改为深灰，比纯黑更具高级视觉感 */
     text-align: justify;
 }
 
+/* ==========================================================================
+   4. 页脚区域 (Footer)
+   ========================================================================== */
+/* 保留您的页脚基础结构，确保排版顺畅 */
+.footer {
+    background-color: #f8f9fa;
+    padding: 4rem 0 2rem;
+    margin-top: 4rem;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.footer-text p, .footer-text a {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    color: #007bff;
+}
+
+.social-list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icon {
+    font-size: 1.25rem;
+    color: #666;
+}
+
+.footer-bottom {
+    margin-top: 3rem;
+    border-top: 1px solid #e9ecef;
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+.footer-bottom .copyright p {
+    color: #999;
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+/* ==========================================================================
+   5. 全局响应式媒体查询 (Responsive Media Queries)
+   ========================================================================== */
+
+/* 平板端适配 (max-width: 1024px) */
 @media (max-width: 1024px) {
+    .banner h1 { font-size: 3.75rem; }
+    .banner h2 { font-size: 2.2rem; }
+
+    .about .grid {
+        max-width: 800px;
+        gap: 3rem;
+    }
     .about .grid .image {
         width: 160px;
         height: 160px;
     }
-
     .about .grid h3 {
-        font-size: 1.25rem;
-        line-height: 1.75rem;
+        font-size: 1.5rem;
     }
+}
 
+/* 手机端适配 (max-width: 768px) */
+@media (max-width: 768px) {
+    .banner h1 { font-size: 3rem; }
+    .banner h2 { font-size: 1.5rem; }
+    .banner h3 { font-size: 1.25rem; }
+    .banner .btn { font-size: 1.5rem; }
+    .banner .btn .icon { width: 40px; height: 40px; padding: 6px; }
+
+    .about { padding: 4rem 0; }
+    .about .intro { margin-bottom: 4rem; }
+
+    /* 核心修复：移动端取消左右交替排列，统一改为“图片在上，文字在下，居中对齐” */
+    .about .grid {
+        gap: 3rem;
+    }
+    .about .grid .item,
+    .about .grid .item.reverse {
+        flex-direction: column; 
+        gap: 1.5rem;
+    }
+    .about .grid .item .content,
+    .about .grid .item.reverse .content {
+        text-align: center; /* 移动端文字居中 */
+    }
+    .about .grid .image {
+        width: 140px;
+        height: 140px;
+    }
+    .about .grid h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
     .about .grid p {
-        font-size: 1rem;
+        font-size: 0.95rem;
         line-height: 1.5rem;
     }
 }
 
-@media (max-width: 768px) {
-    .banner h1 {
-        font-size: 3rem;
-    }
-
-    .banner h2 {
-        font-size: 1.5rem;
-    }
-
-    .banner h3 {
-        font-size: 1.25rem;
-    }
-
-    .banner .btn {
-        font-size: 1.5rem;
-    }
-
-    .banner .btn .icon {
-        width: 40px;
-        height: 40px;
-        padding: 6px;
-    }
-
-    .about {
-        padding: 4rem 0;
-    }
-
-    .about .intro {
-        margin-bottom: 4rem;
-        padding: 0 1rem;
-    }
-
-    .about .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        margin: -1.25rem;
-        padding: 0 1rem;
-    }
-
-    .about .grid .image {
-        width: 90px;
-        height: 90px;
-        grid-column: span 1;
-        margin: 1.25rem;
-    }
-
-    .about .grid .content {
-        grid-column: span 2;
-        margin: 1.25rem;
-    }
-
-    .about .grid .item.reverse .image {
-        grid-column: 3/4;
-    }
-
-    .about .grid .item.reverse .content {
-        grid-column: 1/3;
-        text-align: right;
-    }
-
-    .about .grid h3 {
-        margin-bottom: 0.5rem;
-        font-size: 0.75rem;
-        line-height: 1rem;
-    }
-
-    .about .grid p {
-        font-size: 0.75rem;
-        line-height: 1rem;
-    }
-}
-
-@media (max-width: 640px) {
-    .about .intro h2 {
-        font-size: 1.25rem;
-        line-height: 1.75rem;
-    }
-
-    .about .intro p {
-        font-size: 1.25rem;
-        line-height: 1.75rem;
-    }
-}
-
+/* 小屏幕手机适配 (max-width: 480px) */
 @media (max-width: 480px) {
-    .banner h1 {
-        font-size: 2.5rem;
-    }
+    .banner h1 { font-size: 2.5rem; }
+    .banner h2 { font-size: 1.25rem; }
+    .banner h3 { font-size: 1rem; }
 
-    .banner h2 {
-        font-size: 1.25rem;
-    }
-
-    .banner h3 {
-        font-size: 1rem;
-    }
-
-    .about .intro h2 {
-        font-size: 2rem;
-    }
-
-    .about .intro p {
-        font-size: 1rem;
-    }
-
+    .about .intro h2 { font-size: 2.25rem; }
+    .about .intro p { font-size: 1.1rem; line-height: 1.6rem; }
+    
     .about .grid .image {
-        width: 90px;
-        height: 90px;
+        width: 120px;
+        height: 120px;
     }
 }
 
