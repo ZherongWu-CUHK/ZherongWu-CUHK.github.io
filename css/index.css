@@ -1,8 +1,11 @@
+
 /* ==========================================================================
    1. 全局基础样式与导航栏 (Navbar)
    ========================================================================== */
 body {
-    padding-top: 0 ;
+    padding-top: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 .navbar .logo h1 {
@@ -79,6 +82,7 @@ body {
     font-size: 2rem;
     color: #fff;
     transition: all 0.3s ease;
+    text-decoration: none;
     animation: floating 2s ease-in-out infinite;
 }
 
@@ -112,31 +116,32 @@ body {
 }
 
 /* ==========================================================================
-   3. 关于我们与研究方向区域 (About Us & Research Grid) - 已放大字体并优化排版
+   3. 关于我们区域 (About Us) - 统一大屏幕页边距与大字体
    ========================================================================== */
 .about {
     padding: 6rem 0;
 }
 
+/* ✨ 优化：About Us 引言头部区域 */
 .about .intro {
-    max-width: 1400px;        /* 1. 显式设置一个非常宽的最大限制（原先可能被上层限制了） */
-    width: 92%;               /* 2. 让它占据屏幕 92% 的宽度，两边只留 4% 的极小边距 */
-    margin: 0 auto 6rem;      /* 3. 保持左右居中，底部留白 6rem */
-    padding: 0 20px;          /* 4. 防止在某些极端屏幕上文字贴死浏览器边缘 */
+    max-width: 1200px;  /* 统一限制最大宽度 */
+    margin: 0 auto 6rem;
+    padding: 0 2rem;    /* 左右保留 2rem 页边距 */
+    box-sizing: border-box;
 }
+
 .about .intro h2 {
     margin-bottom: 2rem;
     font-size: 3.75rem;
     line-height: 1;
-    color: rgba(117, 125, 33, 0.8);
     color: inherit;
+    text-align: left;
 }
 
 .about .intro p {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1.65rem;  /* 引言正文同步稍微放大，更具统领感 */
+    line-height: 2.4rem;
     text-align: justify;
-    color: rgba(117, 125, 33, 0.8);
     color: inherit;
 }
 
@@ -144,18 +149,25 @@ body {
     color: rgba(117, 125, 33, 0.6);
 }
 
-/* 严格保留您原有的 5 列网格系统 */
+/* ==========================================================================
+   4. 研究方向网格展示 (Research Grid) - 完美吸附左右边界线
+   ========================================================================== */
 .about .grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    margin: -2rem -1.25rem;
+    margin: 0 auto;
+    
+    /* ✨ 核心修改：将最大宽度与左右内边距和上方的 .intro 严格统一，消除两级页边距不一致的问题 */
+    max-width: 1200px; 
+    padding: 0 2rem;    
+    box-sizing: border-box;
 }
 
 .about .grid .item {
     display: contents;
 }
 
-/* 图片容器：占用 1 列宽 */
+/* 图片容器样式（保持原有圆形尺寸） */
 .about .grid .image {
     grid-column: span 1;
     justify-self: end;
@@ -163,25 +175,28 @@ body {
     height: 200px;
     border-radius: 50%;
     overflow: hidden;
-    margin: 2rem 1.25rem;
+    margin: 3rem 0; /* 清理掉左右无用的 margin 干扰，改由弹性网格线精准吸附 */
 }
 
-/* 文字内容区域：为了容纳大字体，这里将空间从原来的 span 2 扩大到 span 3 */
+/* 正常行内容（文字在右）：通过网格微调，使其右侧边缘完美对齐引言右边缘 */
 .about .grid .content {
-    grid-column: span 3;      /* ✨ 增加横向空间，避免文字因变大而堆叠过长 */
+    grid-column: 2.2 / 6; /* 占用 2.2 列到第 5 列末尾（第 6 条线），强行向右吸附贴齐 */
     align-self: center;
-    margin: 2rem 1.25rem;
+    padding-left: 2.5rem; /* 以 padding 产生优雅的图文左右安全间距 */
 }
 
-/* 反转行：图片在最右侧（第 5 列） */
+/* 反转行图片（图片在右）：放置于最后一列（第 5 列） */
 .about .grid .item.reverse .image {
-    grid-column: 5/6;
+    grid-column: 5 / 6;
+    justify-self: end;
 }
 
-/* 反转行：文字内容占第 2、3、4 列 */
+/* 反转行内容（文字在左）：通过网格微调，使其左侧边缘完美对齐引言左边缘 */
 .about .grid .item.reverse .content {
-    grid-column: 2/5;         /* ✨ 相应地，反转行的网格定位拉宽为 2/5 */
+    grid-column: 1 / 4.8; /* 从第 1 列起点向右平铺到 4.8 列，强行向左吸附贴齐 */
     text-align: right;
+    padding-left: 0;
+    padding-right: 2.5rem; /* 反转时的图文安全间距转换到右侧 */
 }
 
 .about .grid .image img {
@@ -190,50 +205,58 @@ body {
     object-fit: fill;
 }
 
-/* ✨ 核心修改：大幅调大标题字体并规范行高 */
+/* 调大研究方向标题字体 */
 .about .grid h3 {
     margin-bottom: 1rem;
-    font-size: 2.0rem;       /* ✨ 字号从原先的 1.5rem 增大到 2.0rem */
-    line-height: 2.4rem;     /* 相应扩大行高，保证排版整洁 */
+    font-size: 2.0rem;       /* 增大至 2.0rem */
+    line-height: 2.4rem;     /* 相应优化行高 */
     font-weight: 700;
     text-align: left;
-    color: rgba(117, 125, 33, 0.8);
     color: inherit;
 }
 
-/* ✨ 核心修改：大幅调大解释部分的小字字体与行高 */
+/* 调大研究方向描述小字字体 */
 .about .grid p {
-    font-size: 1.35rem;      /* ✨ 字号从原先的 1.125rem 增大到 1.35rem */
+    font-size: 1.35rem;      /* 描述文字增大至 1.35rem */
     font-weight: 400;
-    line-height: 1.9rem;     /* 调大行高，极大提升大段学术英文的阅读舒适度 */
+    line-height: 1.9rem;     /* 优化大字行高，更易于行间扫视 */
     color: #000;
     text-align: justify;
 }
 
 /* ==========================================================================
-   4. 响应式媒体查询 (针对不同分辨率的字体缩放)
+   5. 全局响应式媒体查询 (Responsive Media Queries)
    ========================================================================== */
 
-/* 针对中等及小大屏幕 (max-width: 1024px) */
+/* 针对中等屏幕（平板电脑或窄屏笔记本） */
 @media (max-width: 1024px) {
+    .about .intro {
+        max-width: 1000px;
+        padding: 0 1.5rem;
+    }
+    
+    .about .grid {
+        max-width: 1000px;
+        padding: 0 1.5rem;
+    }
+
     .about .grid .image {
         width: 160px;
         height: 160px;
     }
 
-    /* 保证在 Pad 宽度下字体也有相应的等比例放大表现 */
     .about .grid h3 {
-        font-size: 1.6rem;    /* 从 1.25rem 优化提升至 1.6rem */
+        font-size: 1.6rem;
         line-height: 2rem;
     }
 
     .about .grid p {
-        font-size: 1.15rem;   /* 从 1rem 优化提升至 1.15rem */
+        font-size: 1.15rem;
         line-height: 1.6rem;
     }
 }
 
-/* 针对手机等移动端 (max-width: 768px) */
+/* 针对手机等移动端端屏幕设备 */
 @media (max-width: 768px) {
     .banner h1 { font-size: 3rem; }
     .banner h2 { font-size: 1.5rem; }
@@ -245,15 +268,18 @@ body {
         padding: 4rem 0;
     }
 
+    /* 移动端页边距自适应缩小 */
     .about .intro {
         margin-bottom: 4rem;
         padding: 0 1rem;
     }
+    
+    .about .intro h2 { font-size: 2.5rem; }
+    .about .intro p { font-size: 1.25rem; line-height: 1.8rem; }
 
     .about .grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        margin: -1.25rem;
         padding: 0 1rem;
     }
 
@@ -261,12 +287,12 @@ body {
         width: 90px;
         height: 90px;
         grid-column: span 1;
-        margin: 1.25rem;
+        margin: 1.25rem 0;
     }
 
     .about .grid .content {
         grid-column: span 2;
-        margin: 1.25rem;
+        padding-left: 1.25rem;
     }
 
     .about .grid .item.reverse .image {
@@ -276,38 +302,39 @@ body {
     .about .grid .item.reverse .content {
         grid-column: 1/3;
         text-align: right;
+        padding-right: 1.25rem;
     }
 
-    /* 优化手机端字体：原本的 0.75rem 在放大了大屏字体后会显得过小，这里做优雅调大 */
+    /* 移动端字号规范平滑递减 */
     .about .grid h3 {
         margin-bottom: 0.5rem;
-        font-size: 1.25rem;   /* 从 0.75rem 提升到 1.25rem，手机上更清晰 */
+        font-size: 1.25rem;
         line-height: 1.5rem;
     }
 
     .about .grid p {
-        font-size: 0.95rem;   /* 从 0.75rem 提升到 0.95rem */
+        font-size: 0.95rem;
         line-height: 1.4rem;
     }
 }
 
-/* 针对更细窄的小手机 (max-width: 640px) */
+/* 窄手机屏幕 */
 @media (max-width: 640px) {
-    .about .intro h2 { font-size: 1.25rem; line-height: 1.75rem; }
-    .about .intro p { font-size: 1.25rem; line-height: 1.75rem; }
+    .about .intro h2 { font-size: 2rem; }
+    .about .intro p { font-size: 1.1rem; line-height: 1.6rem; }
 }
 
-/* 针对微型手机屏幕 (max-width: 480px) */
+/* 极小手机屏幕适配 */
 @media (max-width: 480px) {
     .banner h1 { font-size: 2.5rem; }
     .banner h2 { font-size: 1.25rem; }
     .banner h3 { font-size: 1rem; }
 
-    .about .intro h2 { font-size: 2rem; }
+    .about .intro h2 { font-size: 1.75rem; }
     .about .intro p { font-size: 1rem; }
 
     .about .grid .image {
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
     }
 }
