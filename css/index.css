@@ -1,25 +1,24 @@
 /* ==========================================================================
    1. 全局基础样式与导航栏 (Navbar)
    ========================================================================== */
-/* 导航栏左右布局 */
-.navbar .content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* 强制导航栏左右分开 */
+.navbar .wrapper .content {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
 }
 
-/* 导航横向排列 */
 .navbar .nav {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-  padding: 0;
-  margin: 0;
+  display: flex !important;
+  gap: 1.8rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
 }
 
-/* 桌面端隐藏汉堡按钮 */
 .navbar .menu {
-  display: none;
+  display: none !important;
 }
 
 body {
