@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 找到 </head>，在它上面加上这段 -->
+    <style>
+        /* 1. 强行放大并加粗左侧 Lab 标题 */
+        body .navbar .logo h1, 
+        body .navbar .logo {
+            font-size: 1.8rem !important;
+            font-weight: 700 !important;
+            display: inline-block !important;
+        }
+
+        /* 2. 强行放大并加粗右侧 News, People 等所有单词 */
+        body .navbar .nav li a, 
+        body .navbar .nav-item {
+            font-size: 1.5rem !important;
+            font-weight: 700 !important;
+        }
+
+        /* 3. 下拉子菜单字号 */
+        body .navbar .sub-nav a {
+            font-size: 1rem !important;
+            font-weight: 600 !important;
+        }
+    </style> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zherong Wu’s Page</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/member.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="content">
+            <div class="logo">
+                <a href="index.html">
+                    <h1 class="logo">Earth Intelligence Lab | EIL</h1>
+                </a>
+            </div>
+            <button class="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav">
+                <li><a href="news.html" class="nav-item">News</a></li>
+                <li>
+                    <a href="javascript:void(0)" class="nav-item">People</a>
+                    <ul class="sub-nav">
+                        <li><a href="people.html">Principal Investigator</a></li>
+                        <li><a href="members.html">Lab Members</a></li>
+                    </ul>
+                </li>
+                <li><a href="research.html" class="nav-item">Research</a></li>
+                <li><a href="publications.html" class="nav-item">Publications</a></li>
+                <li><a href="openings.html" class="nav-item">Openings</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="member">
+        <h2>Lab Members</h2>
+        <div class="wrapper">
+            <div class="item">
+                <div class="member-photo">
+                    <img src="images/member1.jpg" alt="">
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Qianxin Wang</h3>
+                    <p class="member-title">PhD Student (Co-supervised with Prof. Peifeng Ma)</p>
+                    <p class="member-email">Email: qianxinwang@link.cuhk.edu.hk</p>
+
+                    <div class="member-links">
+                        <a href="#">Google Scholar</a> | <a href="#">ResearchGate</a> | <a href="#">Twitter</a>
+                    </div>
+
+                    <div class="member-bio">
+                        <p>Qianxin Wang is currently working towards her PhD degree at the Department of Geography and Resource Management, The Chinese University of Hong Kong. She obtained her MSc degree in Cartography and Geographic Information Systems from the Chinese Academy of Sciences. She also earned her BS degree in Geographic Information Science from the China University of Petroleum. Her research interests include monitoring vegetation change and restoration, carbon neutrality, and the application of advanced Earth Observation technology.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="member-photo">
+                    <img src="images/member2.jpg" alt="">
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Youran Fu</h3>
+                    <p class="member-title">Mphil Student (Co-supervised with Prof. Peifeng Ma)</p>
+                    <p class="member-email">Email: fuyouran@link.cuhk.edu.hk</p>
+
+                    <div class="member-links">
+                        <a href="#">Google Scholar</a> | <a href="#">ResearchGate</a> | <a href="#">Twitter</a>
+                    </div>
+
+                    <div class="member-bio">
+                        <p>Youran Fu is currently a Mphil student at the Institute of Space and Earth Information Science, The Chinese University of Hong Kong. He received his BE degree  in Computer Science and Technology at the Beijing Institute of Technology in 2023. His research interests are machine learning-based carbon analysis and computer vision in remote sensing images.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="member-photo">
+                    <img src="images/member3.jpg" alt="">
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Chuoran Li</h3>
+                    <p class="member-title">Research Assistant</p>
+                    <p class="member-email">Email: chuoranli@cuhk.edu.hk</p>
+
+                    <div class="member-links">
+                        <a href="#">Google Scholar</a> | <a href="#">ResearchGate</a> | <a href="#">Twitter</a>
+                    </div>
+
+                    <div class="member-bio">
+                        <p>Chuoran Li is currently a Research Assistant and will start his PhD program in Fall 2026 at the Institute of Space and Earth Information Science, The Chinese University of Hong Kong. He received his BSc, LLB, and MSc degrees from Tianjin University. His research focuses on urban sustainability, natural hazards, and ecological-environmental interactions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="member-photo">
+                    <img src="images/RA_Wang.jpg" alt="">
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Yuze Wang</h3>
+                    <p class="member-title">Research Assistant</p>
+                    <p class="member-email">Email: wyz1044891008@gmail.com</p>
+
+                    <div class="member-links">
+                        <a href="#">Google Scholar</a> | <a href="#">ResearchGate</a> | <a href="#">Twitter</a>
+                    </div>
+
+                    <div class="member-bio">
+                        <p>Yuze Wang is currently a Research Assistant and will start his PhD program in Spring 2027 at the Institute of Space and Earth Information Science, The Chinese University of Hong Kong. He obtained his MSc degree from the University of Tokyo in 2026. He also earned his BEng degree in from Wuhan University in 2024. His research interests include earth observations, natural disasters and artificial intelligence.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="member-photo">
+                    <img src="images/RA_Ye.jpg" alt="">
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Zhiyu Ye</h3>
+                    <p class="member-title">Research Assistant</p>
+                    <p class="member-email">Email: yezhiyugogogo@163.com</p>
+
+                    <div class="member-links">
+                        <a href="#">Google Scholar</a> | <a href="#">ResearchGate</a> | <a href="#">Twitter</a>
+                    </div>
+
+                    <div class="member-bio">
+                        <p>Zhiyu Ye is currently working as a Research Assistant and will begin her Ph.D. studies at the Institute of Space and Earth Information Science, The Chinese University of Hong Kong, in Spring 2027. She received her M.Eng. degree from Wuhan University and her B.Sc. degree from Xinjiang University. Her research interests focus on long-term remote sensing monitoring of environmental dynamics, global climate change, and the ecological effects of wetland and lake ecosystems.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="member-photo">
+                    <img src="images/RA_Sun.jpg" alt="">
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Xiaoming Sun</h3>
+                    <p class="member-title">Research Assistant</p>
+                    <p class="member-email">Email:xiaomingsun2023@163.com</p>
+
+                    <div class="member-links">
+                        <a href="#">Google Scholar</a> | <a href="#">ResearchGate</a> | <a href="#">Twitter</a>
+                    </div>
+
+                    <div class="member-bio">
+                        <p>Xiaoming Sun is currently a Research Assistant at the Institute of Space and Earth Information Science, The Chinese University of Hong Kong. She received her MEng degree in Resources and Environment from China University of Geosciences, Wuhan. Her research focuses on deep learning, particularly transfer learning and self-supervised learning.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="member-photo">
+                    <img src="images/member4.jpg" alt="">
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Mingze Fang</h3>
+                    <p class="member-title">Research Assistant</p>
+                    <p class="member-email">Email: mzfang@cuhk.edu.hk</p>
+
+                    <div class="member-links">
+                        <a href="#">Google Scholar</a> | <a href="#">ResearchGate</a> | <a href="#">Twitter</a>
+                    </div>
+
+                    <div class="member-bio">
+                        <p>Mingze Fang is currently a Research Assistant at the Institute of Space and Earth Information Science, The Chinese University of Hong Kong. He obtained his MSc degree in Data Science from City Unviersity of Hong Kong in 2024. He also earned his BEng degree in Environmental and Ecological Engineering from Dalian University of Technology in 2021. His research interests include ecological environment monitoring, time series modeling and causal inference, and the application of data science.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="member-photo">
+                    <img src="images/Undergraduate_Wu.jpg" alt="">
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Liyan Wu, Michelle</h3>
+                    <p class="member-title">Undergraduate Research Intern</p>
+                    <p class="member-email">Email:1155211083@link.cuhk.edu.hk</p>
+
+                    <div class="member-links">
+                        <a href="#">Google Scholar</a> | <a href="#">ResearchGate</a> | <a href="#">Twitter</a>
+                    </div>
+
+                    <div class="member-bio">
+                        <p>Liyan Wu, Michelle is currently an undergraduate student at the Department of Geography and Resource Management, The Chinese University of Hong Kong. Her research interests lie at the intersection of urban environmental studies, social inequalities, and geospatial data science.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="member-photo">
+                    <img src="images/Undergraduate_Lu.png" alt="">
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Benedicta Beatrix Winona Lumme</h3>
+                    <p class="member-title">Undergraduate Summer Research Intern</p>
+                    <p class="member-email">Email:124040048@link.cuhk.edu.cn</p>
+
+                    <div class="member-links">
+                        <a href="#">Google Scholar</a> | <a href="#">ResearchGate</a> | <a href="#">Twitter</a>
+                    </div>
+
+                    <div class="member-bio">
+                        <p>Winona is currently an undergraduate student at the School of Data Science of The Chinese University of Hong Kong, Shenzhen. Her research interests are centered around geospatial data science and integrating machine learning for environmental changes.</p>
+                    </div>
+                </div>
+            </div>
+
+            
+             <div class="item">
+                <div class="member-photo">
+                    <img src="images/member6.jpg" alt="">
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Bizheng Wu</h3>
+                    <p class="member-title">Undergraduate Research Intern</p>
+                    <p class="member-email">Email:1155236907@link.cuhk.edu.hk</p>
+
+                    <div class="member-links">
+                        <a href="#">Google Scholar</a> | <a href="#">ResearchGate</a> | <a href="#">Twitter</a>
+                    </div>
+
+                    <div class="member-bio">
+                        <p>Bizheng Wu is currently an undergraduate student in the Double Major Program (ECE&ASEI) jointly offered by The Chinese University of Hong Kong and The Chinese University of Hong Kong (Shenzhen). His research focuses on the intersection of artificial intelligence and remote sensing technology.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="item">
+                <div class="member-photo">
+                    <img src="images/member5.jpg" alt="">
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">Ming Du</h3>
+                    <p class="member-title">Undergraduate Research Intern</p>
+                    <p class="member-email">Email: 1155236892@link.cuhk.edu.hk</p>
+
+                    <div class="member-links">
+                        <a href="#">Google Scholar</a> | <a href="#">ResearchGate</a> | <a href="#">Twitter</a>
+                    </div>
+
+                    <div class="member-bio">
+                        <p>Ming Du is currently an undergraduate student in the Double Major Program jointly cultivated by The Chinese University of Hong Kong and The Chinese University of Hong Kong, Shenzhen. His research interest is the combination of deep learning and remote sensing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-block logo-block">
+                        <a href="#" class="footer-link">
+                            <img width="230" src="images/Logo1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="footer-block">
+                        <div class="footer-text">
+                            <p>Earth Intelligence Lab
+                               Understanding Carbon and Climate in the Changing Earth through AI and Earth Observation
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <div class="footer-block">
+                        <h4 class="footer-title">Info</h4>
+                        <div class="footer-text">
+                            <p>Address:<br>
+                                <a href="#">The chinese University of Hong Kong, shatin, Hongkong</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <div class="footer-block">
+                        <h4 class="footer-title">Contact</h4>
+                        <div class="footer-text">
+                            <p>Enquiries:<br>zherongwu@cuhk.edu.hk</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <div class="footer-block">
+                        <h4 class="footer-title">Social</h4>
+                        <div class="footer-text">
+                            <ul class="social-list">
+                                <li class="social-item">
+                                    <a class="footer-link social-icon" href="mailto:zherongwu@cuhk.edu.hk">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="footer-link social-icon" href="https://scholar.google.com/citations?user=bjYPyj0AAAAJ&hl=en">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="footer-link social-icon" href="https://twitter.com/zherong_wu">
+                                        <i class="fab fa-square-x-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="footer-link social-icon" href="https://www.researchgate.net/profile/Zherong-Wu-2">
+                                        <i class="fab fa-researchgate"></i>
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="footer-link social-icon" href="http://linkedin.com/in/zherong-wu-646226275">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-block">
+                        <div class="footer-text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container clearfix">
+                <div class="copyright">
+                    <p>Earth Intelligence Lab@2026</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

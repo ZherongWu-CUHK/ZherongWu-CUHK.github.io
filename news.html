@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 找到 </head>，在它上面加上这段 -->
+    <style>
+        /* 1. 强行放大并加粗左侧 Lab 标题 */
+        body .navbar .logo h1, 
+        body .navbar .logo {
+            font-size: 1.8rem !important;
+            font-weight: 700 !important;
+            display: inline-block !important;
+        }
+
+        /* 2. 强行放大并加粗右侧 News, People 等所有单词 */
+        body .navbar .nav li a, 
+        body .navbar .nav-item {
+            font-size: 1.5rem !important;
+            font-weight: 700 !important;
+        }
+
+        /* 3. 下拉子菜单字号 */
+        body .navbar .sub-nav a {
+            font-size: 1rem !important;
+            font-weight: 600 !important;
+        }
+    </style> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zherong Wu’s Page</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/news.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="content">
+            <div class="logo">
+                <a href="index.html">
+                    <h1 class="logo">Earth Intelligence Lab | EIL</h1>
+                </a>
+            </div>
+            <button class="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav">
+                <li><a href="news.html" class="nav-item">News</a></li>
+                <li>
+                    <a href="javascript:void(0)" class="nav-item">People</a>
+                    <ul class="sub-nav">
+                        <li><a href="people.html">Principal Investigator</a></li>
+                        <li><a href="members.html">Lab Members</a></li>
+                    </ul>
+                </li>
+                <li><a href="research.html" class="nav-item">Research</a></li>
+                <li><a href="publications.html" class="nav-item">Publications</a></li>
+                <li><a href="openings.html" class="nav-item">Openings</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="news">
+        <div class="wrapper">
+            <div class="header">
+                <h2>News</h2>
+            </div>
+
+            <div class="list">
+                <article class="item">
+                    <div class="text">
+                        <h3><a href="#">EIL Members Participate in UN ESCAP Workshop</a>
+                        </h3>
+                        <p>Several EIL members participated in the UN ESCAP workshop “Protecting Development Gains: Leveraging Emerging Technologies and Space Applications for Resilient Development” held in Shenzhen, China. During the workshop, PhD students Qianxin Wang and Chuoran Li delivered oral presentations on their research, while undergraduate student Liyan Wu participated in a panel discussion.</p>
+                        <div class="meta">
+                            <span class="date">Jun 2026</span>
+                            <a href="#" class="source">United Nations Economic and Social Commission for Asia and the Pacific</a>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <a href="#"><img src="images/UN_News.jpg" alt=""></a>
+                    </div>
+                </article>
+                <article class="item">
+                    <div class="text">
+                        <h3><a href="#">Our Lab Receives 1+1+1 Joint Collaboration Fund Support</a>
+                        </h3>
+                        <p>The collaborative project “AI–Satellite Integration for Carbon Neutrality Assessment in Highly Urbanized Regions,” led by Prof. Zherong Wu and jointly conducted with Prof. Qingyu Li's team at CUHK-Shenzhen, has been selected for funding under the 1+1+1 Joint Collaboration Fund – General R&D Project, which supports high-quality collaborative research between CUHK and CUHK-Shenzhen.</p>
+                        <div class="meta">
+                            <span class="date">Jun 2026</span>
+                            <a href="#" class="source">1+1+1 CUHK-CUHK(SZ)-GDSTC Joint Collaboration Fund</a>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <a href="#"><img src="images/news4.png" alt=""></a>
+                    </div>
+                </article>
+                <article class="item">
+                    <div class="text">
+                        <h3><a href="#">Research Project on Forest Biomass Mapping Receives Direct Grant Support</a>
+                        </h3>
+                        <p>The project “Physics-Guided Multi-Source Remote Sensing for High-Resolution Aboveground Biomass Estimation in Tropical and Subtropical Forests” has been awarded funding under the CUHK Direct Grant (DG) for Research 2025-26. Our PhD student, Qianxin Wang (Co-I), played a leading role in proposal development and research design.</p>
+                        <div class="meta">
+                            <span class="date">May 2026</span>
+                            <a href="#" class="source">Direct Grant, The Chinese University of Hong Kong.</a>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <a href="#"><img src="images/news5.png" alt=""></a>
+                    </div>
+                </article>
+                <article class="item">
+                    <div class="text">
+                        <h3><a href="#">Two Inventions by Our Lab Win Gold Medals at the 50th Geneva International Exhibition of Inventions</a>
+                        </h3>
+                        <p>The project “AI-Enhanced InSAR Data Processing Software for Urban Health Monitoring (eSat)” received the Gold Medal with Congratulations of the Jury (the exhibition’s highest honor), while “AI Large Language Model-Powered CUHK Remote Sensing Satellite System for Near-Real-Time Disaster Monitoring” was awarded a Gold Medal.</p>
+                        <div class="meta">
+                            <span class="date">March 2026</span>
+                            <a href="#" class="source">Geneva International Exhibition of Inventions</a>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <a href="#"><img src="images/news6.png" alt=""></a>
+                    </div>
+                </article>
+                <article class="item">
+                    <div class="text">
+                        <h3><a href="#">Welcome Our New CDMP Student Researchers</a>
+                        </h3>
+                        <p>We are pleased to welcome Du Ming and Wu Bizheng to the lab through the CDMP Student Research and Innovation Scheme (CRIS). They will contribute to the project “Integrating Satellite Observations and AI to Improve Terrestrial Carbon Sink Projections in the Greater Bay Area,” gaining hands-on research experience in satellite remote sensing, artificial intelligence, and carbon cycle science.</p>
+                        <div class="meta">
+                            <span class="date">March 2026</span>
+                            <a href="#" class="source">CRIS Committee, The Chinese University of Hong Kong</a>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <a href="#"><img src="images/news7.png" alt=""></a>
+                    </div>
+                </article>
+                <article class="item">
+                    <div class="text">
+                        <h3><a href="#">Our Lab Awarded TDLEG 2025–28 for Project Led by Prof. Zherong Wu.</a>
+                        </h3>
+                        <p>The project “From Aerospace to Classroom: An AI-Powered Immersive Teaching and Learning Platform Based on CUHK Satellites for Cross-Disciplinary Education,” led by Prof. Zherong Wu (PI), has been awarded the Teaching Development and Language Enhancement Grant (TDLEG) 2025–28, with a total funding of HK$1,098,130.</p>
+                        <div class="meta">
+                            <span class="date">Jan 2026</span>
+                            <a href="#" class="source">University Grants Committee of Hong Kong</a>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <a href="#"><img src="images/news1.png" alt=""></a>
+                    </div>
+                </article>
+                <article class="item">
+                    <div class="text">
+                        <h3><a href="#">Congratulations to Youran Fu on Winning the Best Presentation Award at ISPRS–ISDE 2025!</a>
+                        </h3>
+                        <p>Congratulations to Youran Fu, an MPhil student in our lab, for winning the Best Presentation Award at the ISPRS–ISDE 2025 Joint Conference in Nairobi, Kenya. His presentation, “Mamba-LCD: Urban Change Detection in Low-Light Remote Sensing Images,” was recognized for its technical innovation and impact on urban environmental monitoring.</p>
+                        <div class="meta">
+                            <span class="date">Dec 2025</span>
+                            <a href="#" class="source">ISPRS–ISDE</a>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <a href="#"><img src="images/news2.png" alt=""></a>
+                    </div>
+                </article>
+                <article class="item">
+                    <div class="text">
+                        <h3><a href="#">Prof. Zherong Wu Invited to FHKI New Space Economy Report Launch</a>
+                        </h3>
+                        <p>Prof. Zherong Wu was invited as a guest speaker to the report launch “Soaring to Space: Industrial Opportunities for Hong Kong’s New Space Economy,” organized by the Federation of Hong Kong Industries (FHKI). She participated in a high-level panel discussion on the role of universities in developing Hong Kong’s new space economy.</p>
+                        <div class="meta">
+                            <span class="date">Aug 2025</span>
+                            <a href="#" class="source">Federation of Hong Kong Industries</a>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <a href="#"><img src="images/news3.png" alt=""></a>
+                    </div>
+                </article>
+                <article class="item">
+                    <div class="text">
+                        <h3><a href="#">Zherong Wu Invited to Global Young Scientists Summit 2025.</a>
+                        </h3>
+                        <p>Dr. Zherong Wu has been invited to represent Cornell University at the Global Young Scientists Summit (GYSS) 2025, an elite gathering of 340 young scientists nominated by 93 top institutions worldwide. Organized by the Singapore National Research Foundation (NRF), GYSS 2025 features 18 eminent scientists, including Nobel Laureates, Fields Medalists, and Turing Award winners.</p>
+                        <div class="meta">
+                            <span class="date">Jan 2025</span>
+                            <a href="#" class="source">Singapore National Research Foundation</a>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <a href="#"><img src="images/GYSS2025.jpg" alt=""></a>
+                    </div>
+                </article>
+
+                <article class="item">
+                    <div class="text">
+                        <h3><a href="#">Zherong Wu received the Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship!</a>
+                        </h3>
+                        <p>Dr. Zherong Wu has been awarded the prestigious Schmidt AI in Science Postdoctoral Fellowship in September 2024. As part of Schmidt Sciences, this program aims to accelerate the next scientific revolution by applying AI to research in science, technology, engineering, and mathematics (STEM). The Fellowship program supports 160 postdoctoral Fellows around the world each year. Successful candidates must exhibit excellence in their scientific domain and show evidence of strong quantitative skills.</p>
+                        <div class="meta">
+                            <span class="date">Sep 2024</span>
+                            <a href="#" class="source">Schmidt Sciences</a>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <a href="#"><img src="images/Schmidt Al.jpg" alt=""></a>
+                    </div>
+                </article>
+
+                <article class="item">
+                    <div class="text">
+                        <h3><a href="#">RSE paper on subsidence spatial pattern detection ranks among ESI Highly Cited Papers!</a>
+                        </h3>
+                        <p>Our recent paper, published in Remote Sensing of Environment, on subsidence spatial pattern detection has been recognized as an ESI Highly Cited Paper. Multi-temporal InSAR is an effective tool for measuring large-scale land subsidence. However, the measurement points generated by InSAR are too many to be manually analyzed, and automatic subsidence detection and classification methods are still lacking. In this study, we developed an oriented R-CNN deep learning network to automatically detect and classify subsidence bowls using InSAR measurements and multi-source ancillary data. </p>
+                        <div class="meta">
+                            <span class="date">Mar 2024</span>
+                            <a href="#" class="source">Check the paper in Remote Sensing of Environment</a>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <a href="#"><img src="images/ESI.png" alt=""></a>
+                    </div>
+                </article>
+
+                <article class="item">
+                    <div class="text">
+                        <h3><a href="#">Zherong Wu won 1st  Place in IEEE GRSS Excellent PhD Dissertation Award! </a></h3>
+                        <p>Dr. Zherong Wu has been awarded the 1st Place Excellent PhD Dissertation Award by the IEEE Geoscience and Remote Sensing Society (GRSS) Hong Kong Chapter. Her thesis, “Detecting the Spatiotemporal Pattern of Land Subsidence Using InSAR and Deep Learning”, was recognized for its innovative methodologies, scientific significance, and real-world applications.</p>
+                        <div class="meta">
+                            <span class="date">Dec 2023</span>
+                            <a href="#" class="source">IEEE GRSS Hong Kong Chapter</a>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <a href="#"><img src="images/GRSS.jpg" alt=""></a>
+                    </div>
+                </article>
+
+                <article class="item">
+                    <div class="text">
+                        <h3><a href="#">Zherong Wu won 1st Place in 2023 AAG RSSG Student Honors Paper Competition!</a></h3>
+                        <p>Zherong Wu won 1st Place in the American Association of Geographers (AAG) Remote Sensing Specialty Group (RSSG) Students Honors Paper Competition. Winners were selected by the RSSG Judges Committee on the contribution to the field of remote sensing, originality, research design, and the overall quality of the paper and presentation quality. This marks the first time a CUHK student has received this prestigious award.</p>
+                        <div class="meta">
+                            <span class="date">Mar 2023</span>
+                            <a href="#" class="source">AAG</a>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <a href="#"><img src="images/AAG.jpg" alt=""></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-block logo-block">
+                        <a href="#" class="footer-link">
+                            <img width="230" src="images/Logo1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="footer-block">
+                        <div class="footer-text">
+                            <p>Earth Intelligence Lab
+                               Understanding Carbon and Climate in the Changing Earth through AI and Earth Observation
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <div class="footer-block">
+                        <h4 class="footer-title">Info</h4>
+                        <div class="footer-text">
+                            <p>Address:<br>
+                                <a href="#">The chinese University of Hong Kong, shatin, Hongkong</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <div class="footer-block">
+                        <h4 class="footer-title">Contact</h4>
+                        <div class="footer-text">
+                            <p>Enquiries:<br>zherongwu@cuhk.edu.hk</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <div class="footer-block">
+                        <h4 class="footer-title">Social</h4>
+                        <div class="footer-text">
+                            <ul class="social-list">
+                                <li class="social-item">
+                                    <a class="footer-link social-icon" href="mailto:zherongwu@cuhk.edu.hk">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="footer-link social-icon" href="https://scholar.google.com/citations?user=bjYPyj0AAAAJ&hl=en">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="footer-link social-icon" href="https://twitter.com/zherong_wu">
+                                        <i class="fab fa-square-x-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="footer-link social-icon" href="https://www.researchgate.net/profile/Zherong-Wu-2">
+                                        <i class="fab fa-researchgate"></i>
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="footer-link social-icon" href="http://linkedin.com/in/zherong-wu-646226275">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-block">
+                        <div class="footer-text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container clearfix">
+                <div class="copyright">
+                    <p>Earth Intelligence Lab@2026</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate'); 
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, {
+                threshold: 0.5 
+            });
+
+            document.querySelectorAll(".item").forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+
+</html>
+

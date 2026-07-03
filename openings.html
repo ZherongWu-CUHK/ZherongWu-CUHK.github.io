@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- 找到 </head>，在它上面加上这段 -->
+    <style>
+        /* 1. 强行放大并加粗左侧 Lab 标题 */
+        body .navbar .logo h1, 
+        body .navbar .logo {
+            font-size: 1.8rem !important;
+            font-weight: 700 !important;
+            display: inline-block !important;
+        }
+
+        /* 2. 强行放大并加粗右侧 News, People 等所有单词 */
+        body .navbar .nav li a, 
+        body .navbar .nav-item {
+            font-size: 1.5rem !important;
+            font-weight: 700 !important;
+        }
+
+        /* 3. 下拉子菜单字号 */
+        body .navbar .sub-nav a {
+            font-size: 1rem !important;
+            font-weight: 600 !important;
+        }
+    </style> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zherong Wu's Page</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/openings.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="content">
+            <div class="logo">
+                <a href="index.html">
+                    <h1 class="logo">Earth Intelligence Lab | EIL</h1>
+                </a>
+            </div>
+            <button class="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav">
+                <li><a href="news.html" class="nav-item">News</a></li>
+                <li>
+                    <a href="javascript:void(0)" class="nav-item">People</a>
+                    <ul class="sub-nav">
+                        <li><a href="people.html">Principal Investigator</a></li>
+                        <li><a href="members.html">Lab Members</a></li>
+                    </ul>
+                </li>
+                <li><a href="research.html" class="nav-item">Research</a></li>
+                <li><a href="publications.html" class="nav-item">Publications</a></li>
+                <li><a href="openings.html" class="nav-item">Openings</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<section class="openings">
+    <div class="wrapper">
+        <div class="content">
+            <h1>Join Us</h1>
+            <p class="description">The Earth Intelligence Lab (EIL) at The Chinese University of Hong Kong welcomes motivated students and researchers interested in Earth observation, artificial intelligence, carbon cycle science, climate risks, and environmental sustainability. For all positions, please contact Prof. Zherong Wu (zherongwu@cuhk.edu.hk) directly with your CV. </p>
+            
+            <div class="positions">
+                <div class="position">
+                    <div class="header">
+                        <div class="title">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <h3>PhD</h3>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <div style="font-size: 1.125rem; font-weight: 400; line-height: 1.5; color: #000; margin: 0 0 8px 1.0rem;padding-left: 0;text-indent:0; text-align: justify;">
+                            We are looking for self-motivated PhD students to join EIL in Spring/Fall 2027.<br>
+                            Applicants with backgrounds in Remote Sensing, Computer Science, Ecology, Environmental Science, Geography, or related fields are encouraged to apply.<br>
+                            Strong quantitative, programming, and scientific communication skills are highly valued.<br>
+                        <strong>Available funding schemes include:</strong>
+                       </div>
+
+                        <ul style="margin-top: 0; padding-left: 2rem;">
+                            <li style="margin-bottom: 5px;">
+                                <a href="https://www.gs.cuhk.edu.hk/admissions/scholarships-fees/hkpfs" target="_blank" style="color: #333333; font-weight: normal; text-decoration: none;">Hong Kong PhD Fellowship Scheme (HKPFS)</a>
+                            </li>
+                            <li style="margin-bottom: 5px;">
+                                <a href="https://www.gs.cuhk.edu.hk/admissions/scholarships-fees/scholarships" target="_blank" style="color: #333333; font-weight: normal; text-decoration: none;">CUHK Vice-Chancellor's PhD Scholarship Scheme</a>
+                            </li>
+                            <li style="margin-bottom: 5px;">
+                                <a href="https://www.gs.cuhk.edu.hk/admissions/scholarships-fees/scholarships" target="_blank" style="color: #333333; font-weight: normal; text-decoration: none;">Postgraduate Studentships (MPhil and PhD)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="position">
+                    <div class="header">
+                        <div class="title">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <h3>Postdoc</h3>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <ul>
+                            <li>We are always looking for outstanding postdoctoral researchers interested in Earth observation, artificial intelligence, carbon cycle science, climate risks, and related areas. Applicants are expected to have an excellent publication record and demonstrated ability to conduct independent research.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="position">
+                    <div class="header">
+                        <div class="title">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <h3>Research Assistant</h3>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <ul>
+                            <li>We welcome research assistants with backgrounds in Remote Sensing, Computer Science, Environmental Science, Geography, or related fields. Strong programming and data analysis skills are preferred.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="position">
+                    <div class="header">
+                        <div class="title">
+                            <i class="fa-solid fa-chevron-right"></i>
+                            <h3>Undergraduate Research Opportunities</h3>
+                        </div>
+                    </div>
+                    <div class="body">
+                        <ul>
+                            <li>We welcome curious and motivated undergraduate students to join the lab. Students will have opportunities to participate in ongoing research projects, explore research interests, and gain hands-on research experience.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-block logo-block">
+                        <a href="#" class="footer-link">
+                            <img width="230" src="images/Logo1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="footer-block">
+                        <div class="footer-text">
+                            <p>Earth Intelligence Lab
+                               Understanding Carbon and Climate in the Changing Earth through AI and Earth Observation
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <div class="footer-block">
+                        <h4 class="footer-title">Info</h4>
+                        <div class="footer-text">
+                            <p>Address:<br>
+                                <a href="#">The chinese University of Hong Kong, shatin, Hongkong</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <div class="footer-block">
+                        <h4 class="footer-title">Contact</h4>
+                        <div class="footer-text">
+                            <p>Enquiries:<br>zherongwu@cuhk.edu.hk</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <div class="footer-block">
+                        <h4 class="footer-title">Social</h4>
+                        <div class="footer-text">
+                            <ul class="social-list">
+                                <li class="social-item">
+                                    <a class="footer-link social-icon" href="mailto:zherongwu@cuhk.edu.hk">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="footer-link social-icon" href="https://scholar.google.com/citations?user=bjYPyj0AAAAJ&hl=en">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="footer-link social-icon" href="https://twitter.com/zherong_wu">
+                                        <i class="fab fa-square-x-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="footer-link social-icon" href="https://www.researchgate.net/profile/Zherong-Wu-2">
+                                        <i class="fab fa-researchgate"></i>
+                                    </a>
+                                </li>
+                                <li class="social-item">
+                                    <a class="footer-link social-icon" href="http://linkedin.com/in/zherong-wu-646226275">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container clearfix">
+                <div class="copyright">
+                    <p>Earth Intelligence Lab@2026</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/openings.js"></script>
+</body>
+
+</html>
