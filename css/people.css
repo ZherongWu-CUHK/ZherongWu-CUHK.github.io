@@ -313,8 +313,8 @@ body {
 .awards h3 {
     display: block;
     margin-right: 0.5rem;
-    font-size: 1.25rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.75rem;
     font-weight: 700;
     color: #212121;
 }
@@ -420,7 +420,7 @@ body {
     }
 
     .awards h3 {
-        font-size: 1rem;
+        font-size: 0.875rem;
         line-height: 1.5rem;
     }
 
