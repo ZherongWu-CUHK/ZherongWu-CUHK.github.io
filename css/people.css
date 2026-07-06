@@ -180,12 +180,13 @@ body {
 .education-position ul p {
     position: relative;
     padding-left: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .education-position ul p::before {
     content: "";
     position: absolute;
-    top: 4px;
+    top: 7px;
     left: 0;
     width: 16px;
     height: 16px;
@@ -312,8 +313,8 @@ body {
 .awards h3 {
     display: block;
     margin-right: 0.5rem;
-    font-size: 1rem;
-    line-height: 1.75rem;
+    font-size: 1.25rem;
+    line-height: 2rem;
     font-weight: 700;
     color: #212121;
 }
@@ -419,7 +420,7 @@ body {
     }
 
     .awards h3 {
-        font-size: 0.875rem;
+        font-size: 1rem;
         line-height: 1.5rem;
     }
 
@@ -460,6 +461,9 @@ body {
 
     .people .social-links img {
         width: 55px;
+    }
+    .education-position ul p{
+        font-size: 1rem;
     }
 }
 
