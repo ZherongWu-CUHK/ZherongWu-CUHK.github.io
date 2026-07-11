@@ -132,9 +132,6 @@ img {
 }
 
 .navbar .logo h1 {
-    font-size: 1.465rem;
-    font-size: 18px;
-    font-weight: 600;
     color: rgba(255, 255, 255, 0.93);
 }
 
@@ -143,11 +140,11 @@ img {
     transition: all 0.3s ease-in-out;
 }
 
-.navbar .nav > li {
+.navbar .nav>li {
     margin-right: 2rem;
 }
 
-.navbar .nav > li:last-child {
+.navbar .nav>li:last-child {
     margin-right: 0;
 }
 
@@ -375,9 +372,6 @@ img {
         height: 42px;
     }
 
-    .navbar .logo h1 {
-        font-size: 18px;
-    }
 
     .navbar .nav {
         position: absolute;
@@ -516,5 +510,74 @@ img {
 
     .copyright {
         font-size: 0.75rem;
+    }
+}
+
+
+
+/* 1. 强行放大并加粗左侧 Lab 标题 */
+body .navbar .logo h1,
+body .navbar .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: inline-block;
+}
+
+/* 2. 强行放大并加粗右侧 News, People 等所有单词 */
+body .navbar .nav li a,
+body .navbar .nav-item {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* 3. 下拉子菜单字号 */
+body .navbar .sub-nav a {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+
+    body .navbar .logo h1,
+    body .navbar .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        display: inline-block;
+    }
+
+    /* 2. 强行放大并加粗右侧 News, People 等所有单词 */
+    body .navbar .nav li a,
+    body .navbar .nav-item {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    /* 3. 下拉子菜单字号 */
+    body .navbar .sub-nav a {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 480px) {
+
+    body .navbar .logo h1,
+    body .navbar .logo {
+        font-size: 1.2rem;
+        font-weight: 700;
+        display: inline-block;
+    }
+
+    /* 2. 强行放大并加粗右侧 News, People 等所有单词 */
+    body .navbar .nav li a,
+    body .navbar .nav-item {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    /* 3. 下拉子菜单字号 */
+    body .navbar .sub-nav a {
+        font-size: 1rem;
+        font-weight: 600;
     }
 }
