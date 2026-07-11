@@ -163,8 +163,6 @@
         margin-bottom: 0.5rem;
     }
     
-    .news .list {
-    }
 
     .news .list > .item {
         margin-bottom: 3rem;
@@ -245,24 +243,3 @@
     transform: translateX(0); 
 }
 
-/* ===================================================
-   ✨ 状态栏（导航栏）字体大小与终极加粗调整
-=================================================== */
-
-/* 1. 调大并加粗左侧 "Earth Intelligence Lab | EIL" */
-.navbar .logo h1 {
-    font-size: 1.8rem !important;    /* 调整字号，可根据需要改为 24px */
-    font-weight: 700 !important;   /* 强行加粗 */
-}
-
-/* 2. 调大并加粗右侧 "News, People, Research..." 所有单词 */
-.navbar .nav li a.nav-item {
-    font-size: 1.5rem !important;   /* 调整字号，可根据需要改为 20px */
-    font-weight: 700 !important;   /* 强行加粗 */
-}
-
-/* 3. 同步调整鼠标悬停时弹出的下拉子菜单 */
-.navbar .sub-nav a {
-    font-size: 1.5rem !important;    
-    font-weight: 600 !important;   
-}
