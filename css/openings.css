@@ -3,12 +3,14 @@
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    padding: 6rem 0;
+    padding: 6rem 2rem;
+    margin: 0 auto;
+    max-width: 1800px;
 }
 
 .openings h1 {
     margin-bottom: 3rem;
-    font-size: 2.25rem;
+    font-size: 2.2rem;
     line-height: 2.5rem;
     font-weight: 700;
     color: inherit;
@@ -59,7 +61,7 @@
 }
 
 .position .header h3 {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 400;
     color: #fff;
 }
@@ -80,8 +82,8 @@
     max-height: 0;
     padding: 0 24px;
     overflow: hidden;
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 1.5rem;
+    line-height: 1.8;
     color: #fff;
     border: 1px solid #d9d9d9;
     transition: all 0.3s ease;
@@ -95,14 +97,12 @@
 
 .position .body ul {
     padding-left: 2rem;
-    font-size: 1.125rem;
     line-height: 1.75rem;
     font-weight: 400;
     list-style-type: disc;
 }
 
 .position .body li {
-    font-size: 1.125rem;
     font-weight: 400;
     line-height: 1.5;
     color: #000;
@@ -126,7 +126,7 @@
 
 @media (max-width: 768px) {
     .openings {
-        padding: 4rem 0;
+        padding: 4rem 1rem;
     }
 
     .openings h1 {
@@ -146,11 +146,12 @@
     }
     
     .position .header h3 {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 
     .position .body {
         padding: 0 0.75rem;
+         font-size: 1.25rem;
     }
 
     .position.active .body {
@@ -162,7 +163,6 @@
     }
 
     .position .body li {
-        font-size: 0.875rem;
         margin-bottom: 0.5rem;
         line-height: 1.4;
     }
@@ -170,32 +170,21 @@
 
 @media (max-width: 480px) {
     .openings {
-        padding: 3rem 0;
+        padding: 3rem 1rem;
     }
     
-    .openings h1 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
-    
-    .openings .description {
-        font-size: 0.875rem;
-        line-height: 1.4;
-    }
     
     .position .header {
         padding: 0.625rem;
     }
     
-    .position .header h3 {
-        font-size: 0.875rem;
+     .position .header h3 {
+        font-size: 1rem;
     }
-    
-    .position .body li {
-        font-size: 0.8125rem;
-    }
-    
     .position.active .body {
         padding: 0.625rem;
+    }
+    .position .body{
+        font-size: 1rem;
     }
 }
