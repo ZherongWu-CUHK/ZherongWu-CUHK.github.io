@@ -540,7 +540,7 @@ body .navbar .sub-nav a {
 
     body .navbar .logo h1,
     body .navbar .logo {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         font-weight: 700;
         display: inline-block;
     }
@@ -548,13 +548,13 @@ body .navbar .sub-nav a {
     /* 2. 强行放大并加粗右侧 News, People 等所有单词 */
     body .navbar .nav li a,
     body .navbar .nav-item {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight: 700;
     }
 
     /* 3. 下拉子菜单字号 */
     body .navbar .sub-nav a {
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 600;
     }
 }
@@ -563,7 +563,7 @@ body .navbar .sub-nav a {
 
     body .navbar .logo h1,
     body .navbar .logo {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight: 700;
         display: inline-block;
     }
@@ -571,7 +571,7 @@ body .navbar .sub-nav a {
     /* 2. 强行放大并加粗右侧 News, People 等所有单词 */
     body .navbar .nav li a,
     body .navbar .nav-item {
-        font-size: 1rem;
+        font-size: 1.1rem;
         font-weight: 700;
     }
 
