@@ -344,6 +344,10 @@ img {
     }
 }
 
+
+
+
+
 @media (max-width: 768px) {
 
     .footer .footer-widgets {
@@ -579,5 +583,18 @@ body .navbar .sub-nav a {
     body .navbar .sub-nav a {
         font-size: 1rem;
         font-weight: 600;
+    }
+}
+
+@media (max-width:1024px) {
+    .navbar .nav>li {
+        margin-right: 1rem;
+    }
+
+    body .navbar .logo h1, body .navbar .logo{
+        font-size: 1.35rem;
+    }
+    body .navbar .nav li a, body .navbar .nav-item{
+        font-size: 1.2rem;
     }
 }
