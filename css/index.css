@@ -136,7 +136,7 @@ body {
 }
 
 .about .intro {
-   max-width: 1800px;
+   max-width: 1700px;
    padding: 0 2rem;
     margin: 0 auto 6rem;
 }
@@ -165,7 +165,7 @@ body {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     margin: -2rem auto;
-    max-width: 1800px;
+    max-width: 1700px;
 }
 
 .about .grid .item {
