@@ -244,3 +244,49 @@
         font-size: 1rem;
     }
 }
+
+/* Alumni：增加姓名和职位列宽，拉开列间距 */
+.awards .list > .item {
+    display: grid !important;
+
+    grid-template-columns:
+        minmax(0, 1.4fr)
+        minmax(0, 1.2fr)
+        200px
+        minmax(0, 2.4fr) !important;
+
+    gap: 12px 28px !important;
+    align-items: start !important;
+    padding: 18px 0 !important;
+
+    font-size: 1.15rem !important;
+    line-height: 1.6;
+}
+
+/* 长姓名、职位和工作单位允许正常换行 */
+.awards .list > .item > div {
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+/* 日期保持一行 */
+.awards .list > .item > div:nth-child(3) {
+    white-space: nowrap;
+}
+
+/* 中等屏幕：改为两列 */
+@media screen and (max-width: 1100px) {
+    .awards .list > .item {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+/* 手机：改为单列 */
+@media screen and (max-width: 600px) {
+    .awards .list > .item {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 8px !important;
+    }
+}
