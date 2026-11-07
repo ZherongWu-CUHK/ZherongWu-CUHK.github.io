@@ -114,8 +114,19 @@
 }
 
 .awards .item {
-    display: flex;
+    display: grid;
+    grid-template-columns: 0.6fr 0.5fr 0.4fr 1.8fr;
+    gap: 1.5rem;
+    align-items: baseline;
+    padding: 6px 0;
+    font-size: 1.25rem;
+    font-weight: bold;
     border-bottom: 2px dashed #ccc;
+}
+
+.awards .item > div {
+    min-width: 0;
+    overflow-wrap: break-word;
 }
 
 .awards .year {
@@ -147,6 +158,16 @@
     .member-photo {
         margin-right: 0;
         margin-bottom: 30px;
+    }
+
+    .awards {
+        padding: 4rem 1.5rem;
+    }
+
+    .awards .item {
+        grid-template-columns: 0.85fr 0.7fr 0.55fr 1.6fr;
+        gap: 1rem;
+        font-size: 1.1rem;
     }
 }
 
@@ -184,17 +205,44 @@
         display: inline-block;
         margin-bottom: 5px;
     }
+
     .awards {
         padding: 3rem 1rem;
     }
-    .awards h5{
+
+    .awards h5 {
         font-size: 1.2rem;
         margin-bottom: 1rem;
     }
 
     .awards h2 {
-        font-size: 1.25rem;
-        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .awards .list > * {
+        margin-bottom: 1.25rem;
+    }
+
+    .awards .item {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.35rem 1rem;
+        padding: 0.85rem 0;
+        font-size: 1rem;
+        line-height: 1.45;
+        align-items: start;
+    }
+
+    .awards .item > div:nth-child(1) {
+        grid-column: 1 / -1;
+        font-size: 1.05rem;
+    }
+
+    .awards .item > div:nth-child(4) {
+        grid-column: 1 / -1;
+        font-weight: 600;
+        color: #444;
     }
 
     .awards .year {
@@ -205,17 +253,16 @@
     .awards h3 {
         font-size: 1.25rem;
     }
-
 }
 
 @media screen and (max-width: 480px) {
     .member {
-        padding: 3rem 0;
+        padding: 2rem 0;
     }
     
     .member h2 {
         font-size: 1.5rem;
-        margin-bottom: 1.5rem;
+        margin: 1.5rem 0;
     }
     
     .member-photo {
@@ -240,7 +287,45 @@
     .member .wrapper {
         padding: 0 15px;
     }
-     .awards h3{
+
+    .awards {
+        padding: 2.5rem 0.85rem;
+    }
+
+    .awards h2 {
+        font-size: 1.35rem;
+        margin-bottom: 1rem;
+    }
+
+    .awards .list > * {
+        margin-bottom: 1rem;
+    }
+
+    .awards .item {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+        padding: 0.75rem 0;
+        font-size: 0.9375rem;
+        line-height: 1.4;
+    }
+
+    .awards .item > div:nth-child(1),
+    .awards .item > div:nth-child(4) {
+        grid-column: auto;
+    }
+
+    .awards .item > div:nth-child(1) {
+        font-size: 1rem;
+        margin-bottom: 0.15rem;
+    }
+
+    .awards .item > div:nth-child(2),
+    .awards .item > div:nth-child(3) {
+        font-weight: 600;
+        color: #555;
+    }
+
+    .awards h3 {
         font-size: 1rem;
     }
 }
